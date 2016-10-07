@@ -1,0 +1,276 @@
+//-----------------------------------------------------------------------------
+/* TYPE */
+//-----------------------------------------------------------------------------
+h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 2em;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+	// transtions
+
+	&:hover {
+
+	}
+}
+
+em {
+
+}
+
+small {
+
+}
+
+strong {
+
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* LISTS */
+//-----------------------------------------------------------------------------
+ul {
+	list-style: circle inside;
+}
+
+ol {
+	list-style: decimal inside;
+}
+
+li {
+	display: inline-block;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* FORMS */
+//-----------------------------------------------------------------------------
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+textarea,
+select {
+	appearance: none; // removes default styles on some iOS inputs
+
+	width: 100%;
+	height: 50px;
+	padding: 0 20px;
+	background-color: #000000;
+	border: 1px solid #000000;
+	outline: none;
+
+	@include border-radius(4px);
+
+	font-family: $primary-font;
+	font-size: 16px;
+	font-weight: 400;
+
+	&:focus {
+		border: 1px solid #000000;
+	}
+}
+
+textarea {
+	resize: none;
+}
+
+select {
+
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+}
+
+label, legend {
+	font-size: 16px;
+	font-weight: 400;
+	display: block;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* BUTTONS */
+//-----------------------------------------------------------------------------
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	width: 200px;
+	height: 50px;
+	padding: 0;
+	background-color: #000000;
+
+	border: none;
+	outline: none;
+
+	@include border-radius(4px);
+
+	color: #000000;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+
+	}
+
+	&.button-outline {
+		background-color: transparent;
+		color: #000000;
+
+		&:hover,
+		&:focus {
+			border: 1px solid #000000;
+			background-color: #000000;
+			color: #000000;
+		}
+	}
+
+	&.button-disabled {
+		@include opacity(0.5);
+		cursor: default;
+
+		&:hover,
+		&:focus {
+			background-color: #000000;
+			border: 1px solid #000000;
+		}
+	}
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* TABLES */
+//-----------------------------------------------------------------------------
+table {
+	width: 100%;
+}
+
+th, td {
+	border-bottom: 1px solid #000000;
+	padding: 15px 20px;
+	text-align: left;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* CODE */
+//-----------------------------------------------------------------------------
+code {
+	background-color: #000000;
+	font-size: 16px;
+	padding: 20px;
+	white-space: nowrap;
+}
+
+pre {
+	background-color: #000000;
+	border-left: 4px solid #000000;
+	font-family: $primary-font;
+
+	& > code {
+		background-color: transparent;
+		display: block;
+		padding: 20px;
+		white-space: pre;
+	}
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* UTILITIES */
+//-----------------------------------------------------------------------------
+.lft {
+	float: left;
+}
+
+.rgt {
+	float: right;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* MISC */
+//-----------------------------------------------------------------------------
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+
+blockquote {
+	border-left: 4px solid #000000;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 15px 20px;
+}
+
+
+::-moz-selection {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+::selection {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+hr {
+
+}

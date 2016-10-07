@@ -1,0 +1,9 @@
+<div class="download">
+    <div class="wrapper">
+        {{ content }}
+
+        {% for button in page.header.buttons %}
+            <a class="button" href="{{ button.url }}">{{ button.text }}</a>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="showcases">
+    {{ content }}
+    {% for showcase in page.header.showcase %}
+        <div class="showcase">
+            <i class="fa fa-{{ showcase.icon }}"></i>
+            
+            <h4>{{ showcase.header }}</h4>
+        </div>
+    {% endfor %}
+</div>

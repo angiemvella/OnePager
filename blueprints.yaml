@@ -1,0 +1,8 @@
+name: One Pager
+version: 1.0.0
+description: "A simple one page theme for Grav"
+author:
+    name: Angie Vella
+    email: email@email.com
+    url: http://www.website.com
+license: MIT

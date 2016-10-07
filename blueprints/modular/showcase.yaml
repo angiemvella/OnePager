@@ -1,0 +1,37 @@
+title: Showcase
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    name:
+                      default: modular/showcase
+                      '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+            overrides:
+              fields:
+                header.template:
+                  default: modular/showcase
+                  '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+        showcase:
+          type: tab
+          title: Highlights
+          fields:
+            header.showcase:
+              name: showcase
+              type: list
+              label: Showcase
+
+              fields:
+                .icon:
+                  type: text
+                  label: Icon
+                .header:
+                  type: text
+                  label: Header

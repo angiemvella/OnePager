@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{# gets setting from themes/themename/themename.yaml #}
+<html lang="{{ theme_config.default_lang }}">
+
+    <head>
+        {% block head %}
+        {# gets setting from config/site.yaml #}
+        <title>{{ site.title }}</title>
+        
+        {# sets page url #}
+        <link rel="canonical" href="{{ page.url(true, true) }}">
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {# Favicons #}
+        <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}">
+        
+        {# registers stylesheets #}
+        {% block stylesheets %}
+            {% do assets.addCss('theme://css/main.css') %}
+            {% do assets.addCss('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700') %}
+        {% endblock %}
+        
+        {# outputs stylessheets #}
+        {{ assets.css() }}
+
+        {# registers scripts #}
+        {% block javascripts %}
+            {% do assets.addJs('jquery', '110') %}
+        
+            {% do assets.addJs('theme://js/singlepagenav.min.js') %}
+            
+            {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+                {% do assets.add('theme://js/html5shiv.min.js') %}
+                {% do assets.add('theme://js/respond.min.js') %}
+            {% endif %}
+        {% endblock %}
+            
+        {# outputs scripts #}
+        {{ assets.js() }}
+            
+        {% endblock head %}
+    </head>
+    
+    <body>
+        
+        <header class="main-header">
+            <div class="wrapper">
+                <div class="logo">
+                    <a class="logo" href="{{ base_url}}">
+                        <img src="{{ url('theme://imgs/grav-logo.svg') }}">
+                    </a>
+                </div>
+                                
+                <nav class="main-nav">
+                    <ul>
+                        {% for module in page.collection.modular() %}
+                            <li><a href="#{{ module.header.anchor }}">{{ module.menu }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section class="content-wrapper">
+            {% block content %}{% endblock %}
+        </section>
+        
+        {% block bottom %}
+            {{ assets.js('bottom') }}
+            
+            <script>
+                $('.navigation-wrapper').singlePageNav({
+                    offset: $('header.menu').outerHeight(),
+                    updateHash: true,
+                    currentClass: 'menu-active'
+                });
+            </script>
+        {% endblock %}
+    </body>
+</html>

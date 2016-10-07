@@ -1,0 +1,9 @@
+{% extends 'partials/base.html.twig' %} {# Builds on the base.html.twig template #}
+
+{% block content %}
+    {% for module in page.collection() %}
+        <div id="{{ module.header.anchor }}"></div> {# pulls info from section.md yaml #}
+        
+        {{ module.content }}
+    {% endfor %}
+{% endblock %}

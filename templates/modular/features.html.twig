@@ -1,0 +1,11 @@
+<div class="features">
+    {{ content }}
+    {% for feature in page.header.features %}
+        <div class="feature">
+            <i class="fa fa-fw fa-{{ feature.icon }}"></i>
+            
+            <h3>{{ feature.header }}</h3>
+            <p>{{ feature.text }}</p>
+        </div>
+    {% endfor %}
+</div>
