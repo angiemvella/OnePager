@@ -1,4 +1,4 @@
-title: Features
+title: Highlights
 '@extends': default
 
 form:
@@ -12,21 +12,21 @@ form:
                 column1:
                   fields:
                     name:
-                      default: modular/features
+                      default: modular/highlights
                       '@data-options': '\Grav\Common\Page\Pages::modularTypes'
             overrides:
               fields:
                 header.template:
-                  default: modular/features
+                  default: modular/highlights
                   '@data-options': '\Grav\Common\Page\Pages::modularTypes'
-        features:
+        highlights:
           type: tab
-          title: Features
+          title: Highlights
           fields:
-            header.features:
-              name: features
+            header.highlights:
+              name: highlights
               type: list
-              label: Features
+              label: Highlights
 
               fields:
                 .icon:

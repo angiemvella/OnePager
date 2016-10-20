@@ -3,7 +3,9 @@
         {{ content }}
 
         {% for button in page.header.buttons %}
-            <a class="button" href="{{ button.url }}">{{ button.text }}</a>
+            <div class="button-wrapper">
+                <a class="button" href="{{ button.url }}">{{ button.text }}</a>
+            </div>
         {% endfor %}
     </div>
 </div>

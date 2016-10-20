@@ -1,5 +1,14 @@
 <div class="overview">
     <div class="wrapper">
-        {{ content }}   
+        <div class="text">
+            {{ content }}
+        </div>
+
+        <div class="image">
+            {% set image = page.media.images|first %}
+            {% if image %}
+                {{ image }}
+            {% endif %}
+        </div>
     </div>
 </div>

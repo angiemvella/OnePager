@@ -20,12 +20,12 @@ html {
 }
 
 body {
-	background-color: #FFFFFF;
-	color: #444444;
+	background-color: $light-color;
+	color: $dark-color;
 	font-family: $primary-font;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 400;
-	line-height: 26px;
+	line-height: 30px;
 }
 
 .wrapper {
@@ -35,70 +35,172 @@ body {
 }
 
 
+
+
 //-----------------------------------------------------------------------------
 /* HEADER */
 //-----------------------------------------------------------------------------
 .main-header {
     width: 100%;
     height: 100px;
-    
-    img {
-        height: 40px;
-    }
+	background-color: $primary-color;
+	border-bottom: 1px solid rgba($light-color, 0.2);
 }
 
 .logo {
     float: left;
     width: 20%;
     height: 100px;
-    padding: 15px 0;
+    padding: 37px 0;
+
+	font-size: 26px;
+	text-transform: uppercase;
 }
 
 .main-nav {
     float: left;
     width: 80%;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
+	font-weight: 300;
     text-align: right;
-    text-transform: uppercase;
-    
+
     li {
         padding-left: 20px;
     }
-    
+
     a {
         display: block;
-        padding: 36px 0;
-        border-top: 1px solid #FFFFFF;
-        border-bottom: 1px solid #FFFFFF;
-        color: #333333;
-        
+        padding: 34px 0;
+		border-top: 1px solid transparent;
+
         &:hover {
-            border-top: 1px solid #333333;
-            border-bottom: 1px solid #333333;
+            border-top: 1px solid rgba($light-color, 0.2);
         }
     }
 }
 
 
+
+
 //-----------------------------------------------------------------------------
-/* OVERVIEW */
+/* SECTIONS */
 //-----------------------------------------------------------------------------
-.overview {
+#overview, #features, #download {
+	clear: both;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* INTRO */
+//-----------------------------------------------------------------------------
+.intro {
     width: 100%;
-    height: 400px;
-    background-color: #333333;
-    color: #FFFFFF;
-    text-align: center;
-    
+    height: 700px;
+    background-color: $primary-color;
+    color: $light-color;
+
     .wrapper {
-        padding: 100px 0;
-    }
-    
-    h2 {
-        font-size: 30px;
+        padding: 250px 0;
     }
 }
+
+
+
+
+//-----------------------------------------------------------------------------
+/* HIGHLIGHTS */
+//-----------------------------------------------------------------------------
+.highlights {
+	float: left;
+	width: 100%;
+	padding: 100px 0;
+	text-align: center;
+}
+
+.highlight {
+	float: left;
+	width: 50%;
+	min-height: 250px;
+	margin-top: 100px;
+
+	i {
+		color: $primary-color;
+		font-size: 80px;
+	}
+
+	h4 {
+		padding: 20px 0;
+		font-weight: 400;
+	}
+
+	p {
+		max-width: 360px;
+		margin: $margin-auto;
+		font-weight: 300;
+	}
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* OVEVIEW */
+//-----------------------------------------------------------------------------
+.overview {
+	float: left;
+	width: 100%;
+	padding: 100px 0;
+	background-color: rgba($dark-color, 0.1);
+}
+
+.text {
+	float: left;
+	width: 66.66%;
+
+	p {
+		margin-top: 50px;
+		font-weight: 300;
+	}
+}
+
+.image {
+	float: left;
+	width: 33.33%;
+	text-align: right;
+
+	img {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+/* FEATURES */
+//-----------------------------------------------------------------------------
+.features {
+	float: left;
+	width: 100%;
+	padding: 100px 0;
+	text-align: center;
+}
+
+.feature {
+	float: left;
+	width: 25%;
+	margin-top: 100px;
+
+	i {
+		padding-bottom: 20px;
+		color: $primary-color;
+		font-size: 40px;
+	}
+}
+
 
 
 
@@ -106,36 +208,58 @@ body {
 /* DOWNLOAD */
 //-----------------------------------------------------------------------------
 .download {
+	clear: both;
     width: 100%;
-    height: 200px;
-    background-color: #333333;
-    color: #FFFFFF;
-    text-align: center;
-    
-    .wrapper {
-        padding: 60px 0;
-    }
-    
-    h2 {
-        margin-bottom: 20px;
-        font-size: 20px;
+	padding: 100px 0;
+    background-color: $primary-color;
+    color: $light-color;
+
+    h3 {
+		float: left;
+		margin: 0;
         text-transform: uppercase;
     }
-    
+
+	.button-wrapper {
+		float: right;
+	}
+
     a {
-        padding: 10px 20px;
-        border: 1px solid #FFFFFF;
+        padding: 20px 50px;
+        border: 4px solid $light-color;
+		border-radius: 50px;
         background-color: transparent;
-        color: #FFFFFF;
-        font-size: 14px;
-        text-transform: uppercase;
-        
+        color: $light-color;
+        font-size: 20px;
+
         &:hover {
-            background-color: #FFFFFF;
-            color: #333333;
+            background-color: $light-color;
+            color: $primary-color;
         }
     }
 }
+
+
+
+
+//-----------------------------------------------------------------------------
+/* FOOTER */
+//-----------------------------------------------------------------------------
+.main-footer {
+	width: 100%;
+	background-color: #0CB7EA;
+	color: $light-color;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+
+	p {
+		padding: 25px 0;
+	}
+}
+
+
+
 
 //-----------------------------------------------------------------------------
 /* MEDIA QUERIES */

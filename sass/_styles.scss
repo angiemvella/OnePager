@@ -2,25 +2,30 @@
 /* TYPE */
 //-----------------------------------------------------------------------------
 h1 {
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 2em;
+    font-size: 96px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1em;
 }
 
 h2 {
-
+    margin-top: 20px;
+    font-size: 36px;
+    line-height: 46px;
 }
 
 h3 {
-
+    margin-bottom: 20px;
+    font-size: 46px;
 }
 
 h4 {
-
+    font-size: 26px;
+    font-weight: 300;
 }
 
 h5 {
-
+    font-size: 20px;
 }
 
 h6 {
@@ -28,6 +33,7 @@ h6 {
 }
 
 a {
+    color: $light-color;
 	outline: none;
 	text-decoration: none;
 	// transtions

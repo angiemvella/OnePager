@@ -1,0 +1,13 @@
+<div class="highlights">
+    <div class="wrapper">
+        {{ content }}
+        {% for highlight in page.header.highlights %}
+            <div class="highlight">
+                <i class="fa fa-fw fa-{{ highlight.icon }}"></i>
+
+                <h4>{{ highlight.header }}</h4>
+                <p>{{ highlight.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
