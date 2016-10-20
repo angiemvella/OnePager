@@ -1,5 +1,5 @@
 # One Pager
 
-![OnePager](imgs/onepager.jpg)
+![OnePager](onepager.jpg)
 
 One Pager is a one page theme for [Grav](http://getgrav.org).
